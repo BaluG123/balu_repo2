@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'testApp/base.html' %}
+{% block title %}
+videos
+{% endblock %}
+{% block content %}
+    {% for v in video_list %}
+    {% if v.video %}
+    {% if v.image %}
+     <div class="container" style="position:relative;">
+       <div class="box1" >
+         <p style="margin-left:10px;"><video src="{{v.video.url}}"  poster="{{v.image.url}}" controls width="400px" height="400px" ></video><br>{{v.title}}</p><hr>
+       </div>
+
+       </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+{% endblock %}

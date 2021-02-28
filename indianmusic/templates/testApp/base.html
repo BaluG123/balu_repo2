@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/demo.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <style media="screen">
+      body{
+        background: black;
+        color: white;
+      }
+      hr{
+        color: white;
+      }
+    </style>
+    <script type="text/javascript" src={% static "js/jqery.js" %}>
+
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/home"><h5 align=center id="god"> <i><small>BALUmedia</small></i><svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-peace-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 13.292A8 8 0 0 0 8.5.015v7.778l5.5 5.5zm-.708.708L8.5 9.206v6.778a7.967 7.967 0 0 0 4.792-1.986zM7.5 15.985V9.207L2.708 14A7.967 7.967 0 0 0 7.5 15.985zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5z"/>
+    </svg></h5></a>
+    <a class="navbar-brand" href="/music"><h5 align=center id="music"> <i><small>music</small></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-player-fill" viewBox="0 0 16 16">
+  <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+  <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm1 2h6a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+</svg></h5></a>
+  <a class="navbar-brand" href="/video"><h5 align=center id="video"> <i><small>video</small></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+  <path d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+</svg></h5></a>
+  </nav>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+
+    </div>
+
+   <script type="text/javascript" src={% static "js/demo.js" %}>
+
+   </script>
+  </body>
+</html>

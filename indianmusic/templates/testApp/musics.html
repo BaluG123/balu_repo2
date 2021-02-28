@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'testApp/base.html' %}
+{% block title %}
+music
+{% endblock %}
+{% block content %}
+<div class="container" style="position:relative">
+  <div class="box" style="position:absolute;">
+  {% for music in music_list %}
+  {% if music.artistimage %}
+  <img src="{{music.artistimage.url}}" alt="" height="300px" width="300px;" class='audio-image' style="border:1px solid black;border-radius:4px;"><br>
+  {% endif %}
+  {% if music.song %}
+  <audio src="{{music.song.url}}" controls style="width:300px;height:80px;">
+  </audio>
+  <p style="width:300px;color:white;">{{music.songname}},{{music.artistname}}</p><hr>
+  {% endif %}
+  {% endfor %}
+
+</div>
+</div>
+{% endblock %}
